@@ -10,12 +10,12 @@
 <style>
 :root{
   color-scheme: dark;
-  --void:#141a5c;
-  --dusk:#2b3196;
+  --void:#0a2463;
+  --dusk:#1a4a9e;
   --magenta:#f0476a;
   --amber:#ff7a45;
   --chrome:#f4efff;
-  --steel:#c3c0f2;
+  --steel:#bcd3f5;
   --cyan:#7fb2ff;
   --display:"Michroma","Eurostile","Arial Black",sans-serif;
   --body:"Chakra Petch","Segoe UI",system-ui,sans-serif;
@@ -27,34 +27,34 @@ body{font-family:var(--body);font-size:16px;line-height:1.55;padding-inline:clam
 #stars{position:fixed;inset:0;width:100%;height:100%;z-index:0;pointer-events:none}
 .horizon{position:fixed;left:0;right:0;bottom:0;height:46vh;z-index:0;pointer-events:none;
   background:
-    linear-gradient(to top, rgba(255,122,69,.22), rgba(240,71,106,.12) 30%, rgba(20,26,92,0) 75%);
+    linear-gradient(to top, rgba(255,122,69,.14), rgba(90,160,255,.12) 30%, rgba(10,36,99,0) 75%);
 }
 .burst{position:fixed;inset:0;z-index:0;pointer-events:none;
   background:
-    radial-gradient(circle at 62% 30%, rgba(255,245,255,.55) 0, rgba(214,190,255,.35) 8%, rgba(120,110,230,.18) 24%, rgba(20,26,92,0) 52%),
-    conic-gradient(from 0deg at 62% 30%, transparent 0 8deg, rgba(200,190,255,.10) 10deg 14deg, transparent 16deg 40deg, rgba(200,190,255,.08) 42deg 47deg, transparent 49deg 95deg, rgba(90,140,255,.12) 97deg 104deg, transparent 106deg 150deg, rgba(200,190,255,.09) 152deg 158deg, transparent 160deg 215deg, rgba(90,140,255,.10) 217deg 223deg, transparent 225deg 280deg, rgba(200,190,255,.09) 282deg 289deg, transparent 291deg 360deg)}
+    radial-gradient(circle at 62% 30%, rgba(245,250,255,.55) 0, rgba(170,210,255,.35) 8%, rgba(70,130,230,.2) 24%, rgba(10,36,99,0) 52%),
+    conic-gradient(from 0deg at 62% 30%, transparent 0 8deg, rgba(170,210,255,.10) 10deg 14deg, transparent 16deg 40deg, rgba(170,210,255,.08) 42deg 47deg, transparent 49deg 95deg, rgba(90,140,255,.12) 97deg 104deg, transparent 106deg 150deg, rgba(170,210,255,.09) 152deg 158deg, transparent 160deg 215deg, rgba(90,140,255,.10) 217deg 223deg, transparent 225deg 280deg, rgba(170,210,255,.09) 282deg 289deg, transparent 291deg 360deg)}
 .horizon::after{content:"";position:absolute;left:0;right:0;bottom:0;height:34%;
   background:
-    repeating-linear-gradient(to right, rgba(190,180,255,.16) 0 1px, transparent 1px 64px),
-    repeating-linear-gradient(to top, rgba(190,180,255,.13) 0 1px, transparent 1px 22px);
+    repeating-linear-gradient(to right, rgba(150,200,255,.16) 0 1px, transparent 1px 64px),
+    repeating-linear-gradient(to top, rgba(150,200,255,.13) 0 1px, transparent 1px 22px);
   transform:perspective(300px) rotateX(58deg);transform-origin:bottom;
   mask-image:linear-gradient(to top,#000 20%,transparent)}
 main{position:relative;z-index:1;max-width:1120px;margin:0 auto;padding-block:clamp(24px,5vw,56px) 80px}
 
-.hud{font-family:var(--mono);font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:var(--cyan);display:flex;flex-wrap:wrap;gap:8px 24px;justify-content:space-between;border-bottom:1px solid rgba(195,192,242,.3);padding-bottom:12px}
+.hud{font-family:var(--mono);font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:var(--cyan);display:flex;flex-wrap:wrap;gap:8px 24px;justify-content:space-between;border-bottom:1px solid rgba(180,210,245,.3);padding-bottom:12px}
 .hud span:last-child{color:var(--amber)}
 
 /* Carousel */
 .stage{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,6fr);gap:clamp(24px,4vw,56px);align-items:center;margin-top:clamp(24px,4vw,48px)}
 .frame{position:relative;aspect-ratio:3/4;max-width:100%;border-radius:22px 22px 22px 4px;overflow:hidden;
   background:var(--dusk);
-  box-shadow:0 0 0 10px #5a5cc4, 0 0 0 11px rgba(244,239,255,.35), 0 30px 90px -20px rgba(255,122,69,.55)}
+  box-shadow:0 0 0 10px #3f74d6, 0 0 0 11px rgba(244,239,255,.35), 0 30px 90px -20px rgba(255,122,69,.55)}
 .frame img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transform:scale(1.06);transition:opacity .9s ease, transform 6s ease}
 .frame img.on{opacity:1;transform:scale(1)}
 .frame img.fit{object-fit:contain}
 .frame img.bd{opacity:1;filter:blur(22px) brightness(.5) saturate(1.2);transform:scale(1.25);transition:none}
 .frame::after{content:"";position:absolute;inset:0;pointer-events:none;
-  background:linear-gradient(to top,rgba(20,26,92,.55),transparent 35%),repeating-linear-gradient(to bottom,rgba(255,255,255,.035) 0 1px,transparent 1px 3px)}
+  background:linear-gradient(to top,rgba(10,36,99,.55),transparent 35%),repeating-linear-gradient(to bottom,rgba(255,255,255,.035) 0 1px,transparent 1px 3px)}
 .corner{position:absolute;width:26px;height:26px;border:2px solid var(--cyan);z-index:2;opacity:.85}
 .c1{top:14px;left:14px;border-right:0;border-bottom:0}
 .c2{top:14px;right:14px;border-left:0;border-bottom:0}
@@ -65,19 +65,19 @@ main{position:relative;z-index:1;max-width:1120px;margin:0 auto;padding-block:cl
 .eyebrow{font-family:var(--mono);font-size:13px;letter-spacing:.2em;text-transform:uppercase;color:var(--amber);margin:0 0 18px}
 .greet{font-family:var(--display);font-weight:400;text-transform:uppercase;line-height:1.08;letter-spacing:.02em;margin:0;text-wrap:balance;
   font-size:clamp(34px,5.6vw,68px);
-  background:linear-gradient(180deg,#fff 0%,#e6dcff 40%,#8f8fe6 50%,#ffb08a 58%,#f0476a 100%);
+  background:linear-gradient(180deg,#fff 0%,#dcebff 40%,#7fa8ea 50%,#ffb08a 58%,#f0476a 100%);
   -webkit-background-clip:text;background-clip:text;color:transparent;
-  filter:drop-shadow(0 2px 0 rgba(0,0,0,.4)) drop-shadow(0 0 22px rgba(214,190,255,.45))}
+  filter:drop-shadow(0 2px 0 rgba(0,0,0,.4)) drop-shadow(0 0 22px rgba(170,210,255,.45))}
 .greet .small{display:block;font-size:.42em;letter-spacing:.3em;margin-bottom:.5em}
 .sub{color:var(--steel);max-width:44ch;margin:22px 0 0;font-size:17px}
 .fade{animation:rise .8s ease both}
 @keyframes rise{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
 
 .controls{display:flex;align-items:center;gap:16px;margin-top:36px;flex-wrap:wrap}
-.btn-round{width:48px;height:48px;border-radius:50%;border:1px solid rgba(244,239,255,.4);background:rgba(43,49,150,.6);color:var(--chrome);font-size:20px;cursor:pointer;display:grid;place-items:center;transition:border-color .2s, box-shadow .2s}
+.btn-round{width:48px;height:48px;border-radius:50%;border:1px solid rgba(244,239,255,.4);background:rgba(26,74,158,.6);color:var(--chrome);font-size:20px;cursor:pointer;display:grid;place-items:center;transition:border-color .2s, box-shadow .2s}
 .btn-round:hover{border-color:var(--cyan);box-shadow:0 0 16px rgba(127,178,255,.45)}
 .dots{display:flex;gap:6px;flex-wrap:wrap}
-.dot{width:16px;height:4px;border:0;padding:0;border-radius:2px;background:rgba(195,192,242,.35);cursor:pointer;transition:background .3s,width .3s}
+.dot{width:16px;height:4px;border:0;padding:0;border-radius:2px;background:rgba(180,210,245,.35);cursor:pointer;transition:background .3s,width .3s}
 .dot.on{background:var(--magenta);width:32px;box-shadow:0 0 10px var(--magenta)}
 button:focus-visible{outline:2px solid var(--cyan);outline-offset:3px}
 
@@ -97,14 +97,16 @@ button:focus-visible{outline:2px solid var(--cyan);outline-offset:3px}
 .reveal{margin-top:clamp(56px,8vw,96px)}
 .far{font-family:var(--display);text-transform:uppercase;text-align:center;line-height:1.15;margin:0 auto;max-width:18ch;text-wrap:balance;
   font-size:clamp(30px,5.2vw,64px);color:var(--chrome);
-  text-shadow:0 0 18px rgba(214,190,255,.7),0 0 50px rgba(255,122,69,.35)}
+  text-shadow:0 0 18px rgba(170,210,255,.7),0 0 50px rgba(255,122,69,.35)}
 .far em{font-style:normal;color:var(--amber)}
 .mission{margin-top:clamp(40px,6vw,72px);display:grid;grid-template-columns:1fr;gap:clamp(28px,4vw,44px)}
 .info{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,1fr);gap:clamp(24px,4vw,56px);align-items:end}
-.vista{position:relative;aspect-ratio:2.35/1;max-width:100%;border-radius:22px;overflow:hidden;
+.vista{position:relative;aspect-ratio:2397/610;max-width:100%;border-radius:22px;overflow:hidden;
   background:linear-gradient(to bottom,#2b3196 0%,#6a63d6 30%,#c9b4ff 48%,#ff9a6a 56%,#1e2a8a 57%);
   box-shadow:0 0 0 1px rgba(244,239,255,.3),0 30px 80px -24px rgba(255,122,69,.6)}
-.vista svg{position:absolute;inset:0;width:100%;height:100%}
+.vista img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:saturate(1.1) contrast(1.05)}
+.vista::after{content:"";position:absolute;inset:0;pointer-events:none;mix-blend-mode:soft-light;background:linear-gradient(to bottom,rgba(60,110,210,.75),rgba(150,200,255,.35) 45%,rgba(255,122,69,.55))}
+.vista::before{content:"";position:absolute;inset:0;z-index:1;pointer-events:none;background:linear-gradient(to bottom,rgba(26,74,158,.25),transparent 40%,rgba(10,36,99,.35))}
 .mission h2{font-family:var(--display);font-weight:400;text-transform:uppercase;font-size:clamp(20px,2.6vw,30px);line-height:1.2;margin:0 0 6px;letter-spacing:.03em}
 .mission .where{font-family:var(--mono);color:var(--cyan);letter-spacing:.1em;text-transform:uppercase;font-size:13px;margin:0 0 20px}
 .mission p.lede{color:var(--steel);margin:0 0 24px;max-width:52ch}
@@ -113,13 +115,12 @@ button:focus-visible{outline:2px solid var(--cyan);outline-offset:3px}
 .specs dd{margin:0}
 .link{display:inline-flex;align-items:center;gap:10px;font-family:var(--display);font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:var(--chrome);text-decoration:none;border:1px solid var(--cyan);border-radius:999px;padding:14px 26px;transition:background .2s, box-shadow .2s}
 .link:hover{background:rgba(127,178,255,.14);box-shadow:0 0 20px rgba(127,178,255,.45)}
-.letsgo{font-family:var(--display);text-transform:uppercase;text-align:center;text-wrap:balance;margin:clamp(56px,8vw,88px) auto 0;max-width:22ch;line-height:1.2;font-size:clamp(24px,3.6vw,44px);color:var(--chrome);text-shadow:0 0 18px rgba(214,190,255,.7)}
+.letsgo{font-family:var(--display);text-transform:uppercase;text-align:center;text-wrap:balance;margin:clamp(56px,8vw,88px) auto 0;max-width:22ch;line-height:1.2;font-size:clamp(24px,3.6vw,44px);color:var(--chrome);text-shadow:0 0 18px rgba(170,210,255,.7)}
 .letsgo em{font-style:normal;color:var(--amber);letter-spacing:.06em}
 .sign{text-align:center;margin-top:72px;font-family:var(--mono);letter-spacing:.2em;text-transform:uppercase;font-size:13px;color:var(--steel)}
 
 @media (max-width:760px){
   .stage,.mission,.info{grid-template-columns:1fr}
-  .vista{aspect-ratio:16/10}
   .frame{max-width:420px;width:100%;margin-inline:auto}
   .copy{min-height:0;text-align:center;align-items:center}
   .controls{justify-content:center}
@@ -177,79 +178,8 @@ button:focus-visible{outline:2px solid var(--cyan);outline-offset:3px}
     <h1 class="far fade">Let's go to a galaxy <em>far, far away!</em></h1>
 
     <div class="mission fade" style="animation-delay:.4s">
-      <div class="vista" aria-label="Illustration of the Lucas Museum: a long white floating building over a landscaped park">
-        <svg viewBox="0 0 800 340" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
-          <defs>
-            <linearGradient id="facade" x1="0" y1="0" x2="0" y2="1">
-              <stop offset="0" stop-color="#ffffff"/><stop offset=".45" stop-color="#eee8ff"/><stop offset="1" stop-color="#b3acea"/>
-            </linearGradient>
-            <linearGradient id="rim" x1="0" y1="0" x2="1" y2="0">
-              <stop offset="0" stop-color="#ffe4d4"/><stop offset=".35" stop-color="#ffffff"/><stop offset="1" stop-color="#e3dcff"/>
-            </linearGradient>
-            <linearGradient id="roof" x1="0" y1="0" x2="0" y2="1">
-              <stop offset="0" stop-color="#f6f2ff"/><stop offset="1" stop-color="#d6cff7"/>
-            </linearGradient>
-            <radialGradient id="dome" cx=".45" cy=".35" r=".7">
-              <stop offset="0" stop-color="#8cc3a4"/><stop offset=".6" stop-color="#4f8c78"/><stop offset="1" stop-color="#2f6468"/>
-            </radialGradient>
-            <linearGradient id="base" x1="0" y1="0" x2="0" y2="1">
-              <stop offset="0" stop-color="#5a5cc4"/><stop offset="1" stop-color="#2b3196"/>
-            </linearGradient>
-            <radialGradient id="glow" cx=".5" cy=".6" r=".6">
-              <stop offset="0" stop-color="#ffd2b0"/><stop offset=".6" stop-color="#ff7a45" stop-opacity=".7"/><stop offset="1" stop-color="#f0476a" stop-opacity="0"/>
-            </radialGradient>
-            <radialGradient id="sun2" cx=".5" cy=".5" r=".5">
-              <stop offset="0" stop-color="#fff6ff"/><stop offset=".5" stop-color="#d8c8ff" stop-opacity=".7"/><stop offset="1" stop-color="#d8c8ff" stop-opacity="0"/>
-            </radialGradient>
-            <linearGradient id="ground" x1="0" y1="0" x2="0" y2="1">
-              <stop offset="0" stop-color="#4a4fc4"/><stop offset="1" stop-color="#1e2a8a"/>
-            </linearGradient>
-          </defs>
-          <circle cx="120" cy="70" r="120" fill="url(#sun2)"/>
-          <!-- city beyond -->
-          <g fill="#3a3fae" opacity=".5">
-            <rect x="0" y="118" width="60" height="60"/><rect x="70" y="100" width="90" height="78"/><rect x="420" y="84" width="200" height="60"/><rect x="640" y="104" width="70" height="70"/><rect x="720" y="90" width="80" height="90"/>
-          </g>
-          <g stroke="#2b3196" stroke-width="1.2" opacity=".6" fill="none">
-            <path d="M28 130 V 96 M44 128 V 90 M180 110 V 80 M760 118 V 84"/>
-          </g>
-          <!-- landscape + paths -->
-          <rect x="0" y="176" width="800" height="164" fill="url(#ground)"/>
-          <path d="M0 250 C 120 236, 200 270, 330 262 C 460 254, 560 280, 800 262" stroke="#b9a6ff" stroke-width="2" fill="none" opacity=".35"/>
-          <path d="M0 296 C 160 280, 300 312, 470 300 C 600 292, 700 312, 800 300" stroke="#b9a6ff" stroke-width="2" fill="none" opacity=".25"/>
-          <ellipse cx="410" cy="248" rx="370" ry="26" fill="#141a5c" opacity=".55"/>
-          <!-- recessed base with glowing arched entry -->
-          <path d="M170 206 C 176 238, 250 248, 330 246 C 420 244, 560 244, 652 232 C 668 222, 674 208, 672 198 Z" fill="url(#base)"/>
-          <path d="M250 246 C 256 206, 350 200, 372 246 Z" fill="url(#glow)"/>
-          <path d="M600 242 C 612 220, 650 218, 662 238 Z" fill="#ffb08a" opacity=".35"/>
-          <!-- main floating body -->
-          <path d="M34 164 C 30 118, 128 90, 232 90 C 300 90, 330 110, 372 110 C 432 110, 472 74, 584 74 C 694 74, 778 112, 784 146 C 788 174, 728 194, 648 202 C 566 210, 486 214, 424 222 C 364 230, 300 226, 240 216 C 168 204, 38 212, 34 164 Z" fill="url(#facade)"/>
-          <!-- roof surface -->
-          <path d="M58 150 C 58 116, 140 98, 232 98 C 296 98, 328 118, 372 118 C 434 118, 474 84, 584 84 C 684 84, 756 114, 760 140 C 762 158, 706 168, 622 170 C 520 172, 440 170, 372 168 C 292 166, 240 170, 160 170 C 100 170, 58 166, 58 150 Z" fill="url(#roof)"/>
-          <!-- green-roof domes -->
-          <path d="M92 150 C 96 118, 160 104, 232 106 C 290 108, 318 124, 320 142 C 322 158, 280 164, 210 164 C 140 164, 90 164, 92 150 Z" fill="url(#dome)"/>
-          <path d="M414 140 C 430 108, 500 92, 590 92 C 680 92, 736 116, 738 136 C 739 150, 700 156, 640 156 C 560 156, 520 150, 470 152 C 440 153, 408 152, 414 140 Z" fill="url(#dome)"/>
-          <!-- roof terrace cut into the right dome -->
-          <path d="M600 146 C 630 132, 700 130, 726 138 C 716 148, 660 152, 600 146 Z" fill="#2b3196" opacity=".7"/>
-          <ellipse cx="470" cy="140" rx="16" ry="4" fill="#7fb2ff" opacity=".7"/>
-          <!-- oculus in the waist -->
-          <ellipse cx="366" cy="132" rx="30" ry="9" fill="#ffffff"/>
-          <ellipse cx="366" cy="133" rx="22" ry="6" fill="#8f8fe6"/>
-          <ellipse cx="366" cy="134" rx="14" ry="3.5" fill="#2b3196"/>
-          <!-- flowing ribbon edge -->
-          <path d="M44 170 C 150 182, 260 176, 330 170 C 390 164, 440 176, 520 172 C 610 168, 700 160, 770 146" stroke="url(#rim)" stroke-width="5" fill="none" stroke-linecap="round"/>
-          <path d="M40 150 C 40 118, 128 94, 232 94 C 300 94, 330 114, 372 114 C 432 114, 472 78, 584 78 C 690 78, 770 112, 778 144" stroke="#ffffff" stroke-width="1.6" fill="none" opacity=".9"/>
-          <!-- window slits -->
-          <path d="M92 190 C 170 202, 250 204, 320 196" stroke="#2b3196" stroke-width="6" fill="none" stroke-linecap="round" opacity=".85"/>
-          <path d="M400 190 C 480 186, 560 182, 640 176" stroke="#ff7a45" stroke-width="5" fill="none" stroke-linecap="round" opacity=".75"/>
-          <ellipse cx="712" cy="182" rx="32" ry="5" fill="#2b3196" opacity=".8"/>
-          <!-- specular sweep -->
-          <path d="M60 176 C 200 196, 330 190, 420 200" stroke="#ffffff" stroke-width="1" fill="none" opacity=".6"/>
-          <!-- small trees -->
-          <g fill="#3f7c72" opacity=".9">
-            <circle cx="22" cy="236" r="12"/><circle cx="96" cy="258" r="10"/><circle cx="420" cy="276" r="11"/><circle cx="520" cy="270" r="9"/><circle cx="760" cy="244" r="12"/><circle cx="700" cy="268" r="9"/>
-          </g>
-        </svg>
+      <div class="vista">
+        <img src="img/museum.jpg" alt="Aerial view of the Lucas Museum at sunset: a long, curving white building with green roof domes">
       </div>
       <div class="info">
         <div>
@@ -279,9 +209,9 @@ button:focus-visible{outline:2px solid var(--cyan);outline-offset:3px}
 (function(){
   const slides = [
     {eyebrow:"Transmission 01", small:"Happy Birthday", big:"Dad", sub:"Another trip around the sun, and you're still the best space pilot this crew has ever had.", tag:"Lake day"},
-    {eyebrow:"Transmission 02", small:"Happy Birthday", big:"Bubbie", sub:"From your favorite co-pilots: best Bubbie in any galaxy.", tag:"Joshua Tree"},
+    {eyebrow:"Transmission 02", small:"Happy Birthday", big:"Bubby", sub:"From your favorite co-pilots: best Bubby in any galaxy.", tag:"Joshua Tree"},
     {eyebrow:"Transmission 03", small:"Happy Birthday", big:"Jack", sub:"Stirred, shaken, or straight up: here's to you.", tag:"Martini hour"},
-    {eyebrow:"Transmission 04", small:"Official rank", big:"Favorite seat", sub:"The best spot on any bench is right next to Bubbie.", tag:"Bench crew"},
+    {eyebrow:"Transmission 04", small:"Official rank", big:"Favorite seat", sub:"The best spot on any bench is right next to Bubby.", tag:"Bench crew"},
     {eyebrow:"Transmission 05", small:"Field report", big:"Trail partner", sub:"Always up for one more hike, one more view, one more waterfall.", tag:"Waterfall hike"},
     {eyebrow:"Transmission 06", small:"Year after year", big:"Still glowing", sub:"Under the lights, side by side. Here's to many more.", tag:"Holiday lights"},
     {eyebrow:"Transmission 07", small:"Mission log", big:"Laughs on tap", sub:"Big grins, silly ears, and the loudest laughs in the room.", tag:"Brewery stop"},
@@ -320,19 +250,19 @@ button:focus-visible{outline:2px solid var(--cyan);outline-offset:3px}
   for(let k=0;k<420;k++)stars.push({x:(Math.random()-.5)*2,y:(Math.random()-.5)*2,z:Math.random()});
   function frame(){
     speed+=(target-speed)*0.04;
-    x.fillStyle=speed>4?'rgba(20,26,92,.35)':'#141a5c';x.fillRect(0,0,W,H);
+    x.fillStyle=speed>4?'rgba(10,36,99,.35)':'#0a2463';x.fillRect(0,0,W,H);
     const cx=W/2,cy=H*0.42,f=Math.min(W,H)*0.6;
     for(const s of stars){
       const pz=s.z; s.z-=0.0025*speed; if(s.z<=0.01){s.x=(Math.random()-.5)*2;s.y=(Math.random()-.5)*2;s.z=1;continue}
       const sx=cx+s.x/s.z*f, sy=cy+s.y/s.z*f, px=cx+s.x/pz*f, py=cy+s.y/pz*f;
       const a=Math.min(1,(1-s.z)*1.4);
-      x.strokeStyle=speed>4?`rgba(${220+35*a|0},${200+40*a|0},255,${a})`:`rgba(244,239,255,${a})`;
+      x.strokeStyle=speed>4?`rgba(${190+60*a|0},${220+35*a|0},255,${a})`:`rgba(235,244,255,${a})`;
       x.lineWidth=(1-s.z)*2.2*(devicePixelRatio||1);
       x.beginPath();x.moveTo(px,py);x.lineTo(sx+.5,sy+.5);x.stroke();
     }
     requestAnimationFrame(frame);
   }
-  if(!reduce)frame();else{x.fillStyle='#141a5c';x.fillRect(0,0,W,H);for(const s of stars){x.fillStyle='rgba(233,236,245,.7)';x.fillRect(W/2+s.x*W/2,H/2+s.y*H/2,1.5,1.5)}}
+  if(!reduce)frame();else{x.fillStyle='#0a2463';x.fillRect(0,0,W,H);for(const s of stars){x.fillStyle='rgba(233,236,245,.7)';x.fillRect(W/2+s.x*W/2,H/2+s.y*H/2,1.5,1.5)}}
 
   const flash=document.getElementById('flash'),reveal=document.getElementById('reveal'),launch=document.getElementById('launch');
   document.getElementById('go').onclick=()=>{
